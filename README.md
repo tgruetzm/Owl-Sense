@@ -1,6 +1,10 @@
 
 <img src="logo.png" alt="Owl Sense" width="150" />
 
+## Overview
+  * Owl Sense offers an affordable and user-friendly audio recording solution for wildlife research.
+  * Specifically built with extended runtimes and top-notch audio quality in mind.
+
 ## Quick Start Guide
   1. Install a protected 18650 battery and memory card.
   2. The Error LED will flash indicating the clock is not set, configuration may also be missing.
@@ -10,7 +14,7 @@
 
 
 
-## Detailed Hardware Overview
+## Hardware Overview
   - **Buttons**
     * Enable - enables or disables the recorder.  Hold the button until the record LED lights up, then release.
     * Wireless - turns on the wireless radio.  Hold until the blue wireless LED lights up, then release.
@@ -29,9 +33,14 @@
     * Lithium batteries may explode, burn, or cause a fire if misused or mishandled.
   - **Memory Card**
     * At this time only Samsung EVO Plus 64GB or 128GB cards are supported.  Others will work, but there is not guarantee of compatability.  Other cards may significantly reduce runtimes.
+  - **Microphone**
+    * Featuring Infineon's [IM73D122](https://www.infineon.com/cms/en/product/sensor/mems-microphones/mems-microphones-for-consumer/im73d122/) microphone
+    * Ultra-low self-noise/ultra-high SNR 73dB(A)
+    * Microphones are user serviceable, in the event of failure or better microphones becoming available.
+    * The Microphone element is protected externally by an IPx4 hydrophobic Gore membrane.  An external vent helps keep water out of the microphone and dramatically reduces down time from the element being saturated.  The microphone itself is internally rated as IP57.
 
 
-## Detailed iOS App Overview
+## iOS App Overview
   - **Main Page**
     * Recorder List - shows an item for each recorder in range that has the wireless radio on.
     * Defaults - allows configuration of default values, these can be easily loaded to any recorder or are automatically loaded if no configuration file is found.
@@ -73,7 +82,7 @@
       - Update - sends the current configuration to the recorder, including the date/time and location.
       - Use Defaults - sets all selections to the default configuration, this will be grayed out if it matches the default.
 
-## File System
+## Recorder File System
   - **audio**
     * All recordings will be stored in this directory.
     * All files follow this naming convention: <FILE_PREFIX>_<RECORDER_ID>_YYYY-MM-DD_THH-MM-SS.WAV
@@ -91,4 +100,5 @@
     - https://ftdichip.com/drivers/vcp-drivers/
   - Install Artemis firmware tool
     - https://github.com/sparkfun/Artemis-Firmware-Upload-GUI/releases
+  - TODO
 
