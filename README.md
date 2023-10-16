@@ -1,5 +1,5 @@
 
-<img src="Logo.png" alt="Owl Sense" width="150" />
+<img src="logo.png" alt="Owl Sense" width="150" />
 
 ## Quick Start Guide
   1. Install a protected 18650 battery and memory card.
