@@ -3,14 +3,16 @@
 
 ## Overview
   * Owl Sense offers an affordable and user-friendly audio recording solution for wildlife research.
-  * Specifically built with extended runtimes and top-notch audio quality in mind.
+  * Specifically built with extended runtimes and exceptional audio qualtiy.
 
 ## Quick Start Guide
   1. Install a protected 18650 battery and memory card.
-  2. The Error LED will flash indicating the clock is not set, configuration may also be missing.
-  3. Hold the Wireless button until the LED illuminates, to turn on the radio.
+  2. The Error LED will flash indicating the clock is not set.
+  3. Hold the Wireless button until the blue LED illuminates, to turn on the radio.
   4. Load the Owl Sense app on your phone.
-  5. Connect to and configure the device and press Update.
+  5. Connect to and configure the device, set a Continuous schedule and Enable the recorder.
+  6. Press Update and disconnect from the recorder.
+  7. The red Record LED should flash indicating a recording is in progress.
 
 
 
@@ -26,7 +28,7 @@
     * Wireless - blue LED, solid indicates the wireless radio is powered.  Blinking indicates an active connection.
     * Error - red LED, blinking indicates an error.  Recordings will not happen if there is an error condition.  To see the exact error, use the Owl Sense app.
   - **Battery**
-    * Only use protected 18650 cells from reputable manufacturers.
+    * Only use protected 18650 cells from reputable manufacturers.  Cell length must be 69-70mm.
     * Nevery use a battery if it shows any signs of damage or leakage.
     * End user is responsible for any damage or injury caused by misuse or mishandling lithium ion batteries and chargers.
     * Lithium batteries should always be stored individually and in a case or box that separates cells.
@@ -37,7 +39,7 @@
     * Featuring Infineon's [IM73D122](https://www.infineon.com/cms/en/product/sensor/mems-microphones/mems-microphones-for-consumer/im73d122/) microphone
     * Ultra-low self-noise/ultra-high SNR 73dB(A)
     * Microphones are user serviceable, in the event of failure or better microphones becoming available.
-    * The Microphone element is protected externally by an IPx4 hydrophobic Gore membrane.  An external vent helps keep water out of the microphone and dramatically reduces down time from the element being saturated.  The microphone itself is internally rated as IP57.
+    * The Microphone element is protected externally by an IP54 oleophobic Gore membrane.  An external vent helps keep water out of the microphone and dramatically reduces down time from the element being saturated.  The microphone itself is internally rated as IP57.
 
 
 ## iOS App Overview
@@ -67,15 +69,16 @@
       - File Splitting - 1, 2, 4, 6, 12 or 24 hour file splitting.  Files will automatically split at 4GB if exceeded.
     * **Microphone Configuration**
       * Sample Rate - determines the maximum frequency of the audio, how much data is used as well as how long the recorder will run.  Continuous runtimes in hours can be calculated as battery capacity in mAh/current.  The rated capacities are always best case at room temperature with a new cell.  If you want accurate runtimes, you may need to derate the capacity to account for cell age and temperature.  This could be anywhere from 0-20%.  Data usage and runtimes below assume continuous recordings with a 3500mAh battery.  This is absolute best case, which will rarely be seen.  Standy/Off power consumption is negligible(0.4mA).
-        - Sample Rate, Current, Data Usage per Day, Runtime
-        - 8k, 3.25mA, 1.3GB, 1077h
-        - 12k, 4.25mA, 1.9GB, 823h
-        - 16k, 4.75mA, 2.6GB, 736h
-        - 24k, 6.15mA, 3.9GB, 569h
-        - 32k, 7.00mA, 5.1GB, 500h
-        - 48k, 11.5mA, 7.7GB, 300h
+          |Sample Rate| Current| Data Usage per Day| Runtime|
+          |----|-----|------|------|
+          |8k| 3.25mA| 1.3GB| 1077h|
+          |12k| 4.25mA| 1.9GB| 823h|
+          |16k| 4.75mA| 2.6GB| 736h|
+          |24k| 6.15mA| 3.9GB| 569h|
+          |32k| 7mA| 5.1GB| 500h|
+          |48k| 11.5mA| 7.7GB| 300h|
       * Gain - supports configurable output gain between 0dB and 40.5dB.  Higher gain values are generally useful, but can always be amplified in post processing.  With a 0dB gain, the maximum amplitude the recording system can handle is 120dB.  At 40.5dB gain, the maximum amplitude is 79.5dB
-      * High Pass Filter - 0(Min) to 7(Max).  Generally I would use the minium value unless you know how this works with your specific target species.  Post processes can always add a High Pass Filter.
+      * High Pass Filter - 0(Min) to 7(Max).  This reduces the amplitude of low frequency audio.  This can be useful to filter out low frequency noise and minor wind events.  Generally I would use the minium value unless you know how this works with your specific target species.  Post processes can always add a High Pass Filter.
     * **Location**
       - Lattitude and Longitude currently set on the recorder.
     * **Buttons**
@@ -96,6 +99,9 @@
 
 
 ## How to Update the Firmware
+  - Physical connections
+    - https://ftdichip.com/products/ttl-232r-3v3/
+    - Connect the cable to the board with the black wire to GND and the green wire to DTR.
   - Install Drivers
     - https://ftdichip.com/drivers/vcp-drivers/
   - Install Artemis firmware tool
