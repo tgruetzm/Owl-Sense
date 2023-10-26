@@ -5,6 +5,7 @@
   * Owl Sense offers an affordable and user-friendly audio recording solution for general purpose wildlife research.
   * Specifically built with extended runtimes and exceptional audio quality.
   * Recording times can exceed 500 hours at moderate sample rates(24k) or lower on a single 18650 cell.
+  * Supports custom scheduling options to record only when necessary.
   * Fully weather resistant enclosure and microphone - IP57.
 
 ## Quick Start Guide
