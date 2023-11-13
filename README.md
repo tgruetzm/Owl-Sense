@@ -133,12 +133,11 @@ NOTE: This equipment has been tested and found to comply with the limits for a C
   **Product Model:** v1.1  
   **Manufacturer:**  
   Owl Sense LLC  
-  5667 Ashton Loop  
   Lolo, MT 59847  
   troy@owlsense.co  
   www.owlsense.co  
 
-  **Modular Components Used:**
+  **Modular Components Used:**  
   NAME: Artemis V1  
   MODEL: Artemis V1  
   FCC ID: 2ASW8-ART3MIS  
