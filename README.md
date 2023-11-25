@@ -13,7 +13,7 @@
   2. The yellow Error LED will flash indicating the clock is not set.
   3. Hold the Wireless button until the blue LED illuminates, to turn on the radio.
   4. Load the Owl Sense app on your phone.
-  5. Connect to and configure the device, set a Continuous schedule and Enable the recorder.
+  5. Connect to and configure the device, set a Continuous schedule and toggle the recorder On.
   6. Press Update and disconnect from the recorder.
   7. The red Record LED should flash indicating a recording is in progress.
 
@@ -25,7 +25,7 @@
     * Wireless - turns on the wireless radio.  Hold until the blue wireless LED lights up, then release.  Wireless can only be turned on to configure devices when off or on standby.  Configuration can not be done during an active recording.
     * Reset - a single press will reset the board.  Do not reset when a recording is in progress.  This may corrupt the memory card.  The green standy LED will illuminate after the system loads.
   - **LED indicators**
-    * No LED -  if no LED is illuminated the recorder is disabled.  No recordings will take place.
+    * No LED -  if no LED is illuminated the recorder is off.  No recordings will take place.
     * Record - red LED, indicates that a recording is in progress.  The LED blinks everytime a file write occurs.  At a 48k sample rate it's one write/blink per second, at 12k it's one write/blink per 4 seconds, etc...
     * Standy - green LED, indicates that the recorder is on and is waiting for an active schedule.
     * Wireless - blue LED, solid indicates the wireless radio is powered.  Blinking indicates an active connection.
@@ -72,13 +72,10 @@
         *Sunrise/Sunset based schedules support a configurable start before/end after setting.  For example, you can configure a "Sunrise to Sunset" schedule to start 30 minutes before sunrise and end 60 minutes after sunset.
         7. Duty Cycle  
         *Supports a configurable On Period and Off Period in minutes.
-
-          
-        
       - Start Date - configurable date/time to delay before starting the schedule.  Green Standby LED will blink until the date/time passes.
       - File Splitting - 1, 2, 4, 6, 12 or 24 hour file splitting.  Files will automatically split at 4GB if exceeded.
     * **Microphone Configuration**
-      * Sample Rate - determines the maximum frequency of the audio, how much data is used as well as how long the recorder will run.  Continuous runtimes in hours can be calculated as battery capacity in mAh/current.  The rated capacities are always best case at room temperature with a new cell.  If you want accurate runtimes, you may need to derate the capacity to account for cell age and temperature.  This could be anywhere from 0-20%.  Data usage and runtimes below assume continuous recordings with a 3500mAh battery.  This is absolute best case, which will rarely be seen.  Standy/Off power consumption is negligible(0.4mA).
+      * Sample Rate - determines the maximum frequency of the audio, how much data is used as well as how long the recorder will run.  Continuous runtimes in hours can be calculated as battery capacity in mAh/current.  The rated capacities are always best case at room temperature with a new cell.  If you want accurate runtimes, you may need to derate the capacity to account for cell age and temperature.  This could be anywhere from 0-25%.  Data usage and runtimes below assume continuous recordings with a 3500mAh battery at room temerature.  This is best case, which will often not be seen.  Standy/Off power consumption is negligible(0.3mA).
           |Sample Rate| Current| Data Usage per Day| Runtime|
           |----|-----|------|------|
           |8k| 3.25mA| 1.3GB| 1077h|
@@ -87,12 +84,12 @@
           |24k| 6.15mA| 3.9GB| 569h|
           |32k| 7mA| 5.1GB| 500h|
           |48k| 11.5mA| 7.7GB| 300h|
-      * Gain - supports configurable output gain between 0dB and 40.5dB.  Higher gain values are generally useful, but can always be amplified in post processing.  With a 0dB gain, the maximum amplitude the recording system can handle is 120dB.  At 40.5dB gain, the maximum amplitude is 79.5dB
+      * Gain - supports configurable output gain between 0dB and 40.5dB.  Higher gain values are generally useful, but can always be amplified in post processing.  Unless you're dealing with very loud sound sources, using high gain is beneficial.  With a 0dB gain, the maximum amplitude the recording system can handle is 120dB.  At 40.5dB gain, the maximum amplitude is 79.5dB
       * High Pass Filter - 0(Min) to 7(Max).  This reduces the amplitude of low frequency audio.  This can be useful to filter out low frequency noise and minor wind events.  Generally I would use the minium value unless you know how this works with your specific target species.  Post processes can always add a High Pass Filter.
     * **Location**
       - Recorder - shows the configured Lat/Long set on the recorder(location can be copied by long pressing)
       - Actual - shows the current Lat/Long from your mobile device(location can be copied by long pressing)
-      - Deviation - shows distance between the recorder configured position and your mobile devices location. 
+      - Deviation - shows distance between the recorder configured position and your mobile devices location.  This can be useful to ensure the recorder's position closely matches your mobile device.
     * **Buttons**
       - Update - sends the current configuration to the recorder, including the date/time and location.
       - Use Defaults - sets all selections to the default configuration, this will be grayed out if it matches the default.
