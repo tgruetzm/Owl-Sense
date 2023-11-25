@@ -6,7 +6,7 @@
   * Specifically built with extended runtimes and exceptional audio quality.
   * Recording times can exceed 500 hours at moderate sample rates(24k) or lower on a single 18650 cell.
   * Supports custom scheduling options to record only when necessary.
-  * Fully weather resistant enclosure and microphone - IP57.
+  * Fully weather resistant enclosure and microphone.
 
 ## Quick Start Guide
   1. Install a protected 18650 battery and memory card.
@@ -42,7 +42,7 @@
     * Featuring Infineon's [IM73D122](https://www.infineon.com/cms/en/product/sensor/mems-microphones/mems-microphones-for-consumer/im73d122/) microphone
     * Ultra-low self-noise/ultra-high SNR 73dB(A)
     * Microphones are user serviceable, in the event of failure or better microphones becoming available.
-    * The Microphone element is protected externally by an IP54 oleophobic Gore membrane.  An external vent helps keep water out of the microphone and dramatically reduces down time from the element being saturated.  The microphone itself is internally rated as IP57.
+    * The Microphone element is protected externally by an waterproof acoustic PTFE membrane.  This keeps water outside of the microphone port and decreases downtime in wet conditions.
 
 
 ## iOS App Overview
