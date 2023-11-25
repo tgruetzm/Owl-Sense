@@ -2,8 +2,11 @@
 <img src="logo.png" alt="Owl Sense" width="150" />
 
 ## Overview
-  * Owl Sense offers an affordable and user-friendly audio recording solution for wildlife research.
-  * Specifically built with extended runtimes and exceptional audio qualtiy.
+  * Owl Sense offers an affordable and user-friendly audio recording solution for general purpose wildlife research.
+  * Specifically built with extended runtimes and exceptional audio quality.
+  * Recording times can exceed 500 hours at moderate sample rates(24k) or lower on a single 18650 cell.
+  * Supports custom scheduling options to record only when necessary.
+  * Fully weather resistant enclosure and microphone - IP57.
 
 ## Quick Start Guide
   1. Install a protected 18650 battery and memory card.
@@ -117,3 +120,36 @@
     - https://github.com/sparkfun/Artemis-Firmware-Upload-GUI/releases
   - TODO
 
+
+
+## **FCC Compliance Statement**
+### **Contains FCC ID: 2ASW8-ART3MIS**
+
+CAUTION: The manufacturer is not responsible for any changes or modifications not expressly approved by the party responsible for compliance. Such modifications could void the user’s authority to operate the equipment.
+
+NOTE: This equipment has been tested and found to comply with the limits for a Class B digital device, pursuant to part 15 of the FCC Rules. These limits are designed to provide reasonable protection against harmful interference in a residential installation. This equipment generates, uses, and can radiate radio frequency energy, and if not installed and used in accordance with the instructions, may cause harmful interference to radio communications. However, there is no guarantee that interference will not occur in a particular installation. If this equipment does cause harmful interference to radio or television reception, which can be determined by turning the equipment off and on, the user is encouraged to try to correct the interference by one or more of the following measures:
+  - Reorient or relocate the receiving antenna.
+  - Increase the separation between the equipment and receiver.
+  - Connect the equipment into an outlet on a circuit different from that to which the receiver is connected.
+  - Consult the dealer or an experienced radio/TV technician for help.
+
+
+## **Supplier's Declaration of Conformity** 
+### **47 CFR § 2.1077 Compliance Information**
+
+
+  **Product Name:** Owl Sense  
+  **Product Model:** v1.1  
+  **Manufacturer:**  
+  Owl Sense LLC  
+  Lolo, MT 59847  
+  troy@owlsense.co  
+  www.owlsense.co  
+
+  **Modular Components Used:**  
+  NAME: Artemis V1  
+  MODEL: Artemis V1  
+  FCC ID: 2ASW8-ART3MIS  
+  This device complies with part 15 of the FCC Rules. Operation is subject to the following two
+  conditions: (1) This device may not cause harmful interference, and (2) this device must accept
+  any interference received, including interference that may cause undesired operation.
