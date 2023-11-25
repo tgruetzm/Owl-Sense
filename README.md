@@ -7,7 +7,7 @@
 
 ## Quick Start Guide
   1. Install a protected 18650 battery and memory card.
-  2. The Error LED will flash indicating the clock is not set.
+  2. The yellow Error LED will flash indicating the clock is not set.
   3. Hold the Wireless button until the blue LED illuminates, to turn on the radio.
   4. Load the Owl Sense app on your phone.
   5. Connect to and configure the device, set a Continuous schedule and Enable the recorder.
@@ -18,23 +18,23 @@
 
 ## Hardware Overview
   - **Buttons**
-    * Enable - enables or disables the recorder.  Hold the button until the record LED lights up, then release.
-    * Wireless - turns on the wireless radio.  Hold until the blue wireless LED lights up, then release.
+    * On/Off - turns the recorder on or off.  Hold the button until the record LED lights up, then release.
+    * Wireless - turns on the wireless radio.  Hold until the blue wireless LED lights up, then release.  Wireless can only be turned on to configure devices when off or on standby.  Configuration can not be done during an active recording.
     * Reset - a single press will reset the board.  Do not reset when a recording is in progress.  This may corrupt the memory card.  The green standy LED will illuminate after the system loads.
   - **LED indicators**
     * No LED -  if no LED is illuminated the recorder is disabled.  No recordings will take place.
     * Record - red LED, indicates that a recording is in progress.  The LED blinks everytime a file write occurs.  At a 48k sample rate it's one write/blink per second, at 12k it's one write/blink per 4 seconds, etc...
-    * Standy - green LED, indicates that the recorder is enable and is waiting for an active schedule.
+    * Standy - green LED, indicates that the recorder is on and is waiting for an active schedule.
     * Wireless - blue LED, solid indicates the wireless radio is powered.  Blinking indicates an active connection.
-    * Error - red LED, blinking indicates an error.  Recordings will not happen if there is an error condition.  To see the exact error, use the Owl Sense app.
+    * Error - yellow LED, blinking indicates an error.  Recordings will not happen if there is an error condition.  To see the exact error, use the Owl Sense app.
   - **Battery**
-    * Only use protected 18650 cells from reputable manufacturers.  Cell length must be 69-70mm.
+    * Only use protected 18650 cells from reputable manufacturers.  Cell length must be ~70mm.
     * Nevery use a battery if it shows any signs of damage or leakage.
     * End user is responsible for any damage or injury caused by misuse or mishandling lithium ion batteries and chargers.
     * Lithium batteries should always be stored individually and in a case or box that separates cells.
     * Lithium batteries may explode, burn, or cause a fire if misused or mishandled.
   - **Memory Card**
-    * At this time only Samsung EVO Plus 64GB or 128GB cards are supported.  Others will work, but there is not guarantee of compatability.  Other cards may significantly reduce runtimes.
+    * At this time only Samsung EVO Plus 64GB or 128GB cards are supported.  Others will work, but there is no guarantee of compatability.  Other cards may significantly reduce runtimes.
   - **Microphone**
     * Featuring Infineon's [IM73D122](https://www.infineon.com/cms/en/product/sensor/mems-microphones/mems-microphones-for-consumer/im73d122/) microphone
     * Ultra-low self-noise/ultra-high SNR 73dB(A)
@@ -48,23 +48,30 @@
     * Defaults - allows configuration of default values, these can be easily loaded to any recorder or are automatically loaded if no configuration file is found.
   - **Recorder Detail Page**
     * **Recorder Detail** - shows basic info about the recorder.
-      - ID - this value is unique to each recorder.
+      - ID - this value is unique to each recorder(ID can be copied by long pressing).
       - Status - shows details for any error or OK.
-      - Battery levels - shows voltage and approximate battery capacity remaining.
+      - Battery levels - shows voltage and approximate battery capacity remaining.  Capacity numbers are estimates using a Molicel M35A cell. Other cells may show significantly higher or lower capacity estimates.  
       - Current date/time - date/time set on the recorder.
-      - dB level - shows approximate dB level of the microphone.
+      - dB level - shows approximate dB level of the microphone.  This is useful to gauge whether there is an issue with the microphone system(blockage or failure).  You should see this respond to changes in sound intensity.
       - Card details - shows basic storage information.
       - Firmware version
     * **Recorder Configuration**
-      - Enabled - identical function to the physical Enable button, enables or disables the recorder.
-      - File Prefix - all audio files will be prefixed with this name.  Supports 18 characters, alphanumeric and dash.
+      - On/off - identical function to the physical On/Off button.
+      - File Prefix - all audio files will be prefixed with this name.  Supports 18 characters, alphanumeric and dash(File Prefix can be copied by long pressing).
       - Auto DST - Automatically adjusts the recorders clock when DST starts and ends.  Follows US DST standards.
       - Schedule
         1. Continuous
-        2. Sunrise to Sunset, with a configurable extension period(0,30,60,90,120 minutes before and after)
-        3. Sunset to Sunrise, with a configurable extension period(0,30,60,90,120 minutes before and after)
-        4. Sunrise and Sunset, with a configurable extension period(30,60,90,120 minutes before and after)
-        5. Duty Cycle, with a configurable On Period and Off Period in minutes.
+        2. Sunrise to Sunset
+        3. Sunset to Sunrise
+        4. Sunrise and Sunset
+        5. Sunset
+        6. Sunrise  
+        *Sunrise/Sunset based schedules support a configurable start before/end after setting.  For example, you can configure a "Sunrise to Sunset" schedule to start 30 minutes before sunrise and end 60 minutes after sunset.
+        7. Duty Cycle  
+        *Supports a configurable On Period and Off Period in minutes.
+
+          
+        
       - Start Date - configurable date/time to delay before starting the schedule.  Green Standby LED will blink until the date/time passes.
       - File Splitting - 1, 2, 4, 6, 12 or 24 hour file splitting.  Files will automatically split at 4GB if exceeded.
     * **Microphone Configuration**
@@ -80,7 +87,9 @@
       * Gain - supports configurable output gain between 0dB and 40.5dB.  Higher gain values are generally useful, but can always be amplified in post processing.  With a 0dB gain, the maximum amplitude the recording system can handle is 120dB.  At 40.5dB gain, the maximum amplitude is 79.5dB
       * High Pass Filter - 0(Min) to 7(Max).  This reduces the amplitude of low frequency audio.  This can be useful to filter out low frequency noise and minor wind events.  Generally I would use the minium value unless you know how this works with your specific target species.  Post processes can always add a High Pass Filter.
     * **Location**
-      - Lattitude and Longitude currently set on the recorder.
+      - Recorder - shows the configured Lat/Long set on the recorder(location can be copied by long pressing)
+      - Actual - shows the current Lat/Long from your mobile device(location can be copied by long pressing)
+      - Deviation - shows distance between the recorder configured position and your mobile devices location. 
     * **Buttons**
       - Update - sends the current configuration to the recorder, including the date/time and location.
       - Use Defaults - sets all selections to the default configuration, this will be grayed out if it matches the default.
