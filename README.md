@@ -18,6 +18,11 @@
   7. The red Record LED should flash indicating a recording is in progress.
 
 
+## Important Tips and Tricks
+  1. The thumb screws are retained with a small o-ring. Pulling on the screws especially while twisting will cause the o-ring to come off and you will lose it!
+  2. Always check recorder at the time of deployment to ensure that it's recording or on standby and that the error led is off.  Sudden shocks, such as dropping will usually cause the battery to disconnect and the clock will reset.
+  3. Units come with a small desiccant pack pre-installed under the main board.  If units are kept mostly dry and stored closed this should last for years.  Moisture on the board will cause it to misbehave and will dramatically shorten it's life.
+
 
 ## Hardware Overview
   - **Buttons**
