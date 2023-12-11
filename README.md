@@ -19,9 +19,10 @@
 
 
 ## Important Tips and Tricks
-  1. The thumb screws are retained with a small o-ring. Pulling on the screws especially while twisting will cause the o-ring to come off and you will lose it!
-  2. Always check recorder at the time of deployment to ensure that it's recording or on standby and that the error led is off.  Sudden shocks, such as dropping will usually cause the battery to disconnect and the clock will reset.
-  3. Units come with a small desiccant pack pre-installed under the main board.  If units are kept mostly dry and stored closed this should last for years.  Moisture on the board will cause it to misbehave and will dramatically shorten it's life.
+  1. The thumb screws are retained with a small o-ring. Pulling on the screws especially while turning will cause the o-ring to come off and you will lose it!
+  2. Always check recorder at the time of deployment to ensure that it's recording or on standby and that the error led is off.  Sudden shocks, such as dropping can cause the battery to disconnect and the clock will reset.
+  3. LED flashing uses negligible amounts of power, there is no issue with the error LED draining the battery before a deployment if the clock is not set or a card not inserted.
+  4. Units come with a small desiccant pack.  It is required to remain in the unit.  If units are kept mostly dry and stored closed the desiccant should last for years.  Moisture on the board will cause it to misbehave and will likely shorten it's life.
 
 
 ## Hardware Overview
@@ -94,7 +95,7 @@
     * **Location**
       - Recorder - shows the configured Lat/Long set on the recorder(location can be copied by long pressing)
       - Actual - shows the current Lat/Long from your mobile device(location can be copied by long pressing)
-      - Deviation - shows distance between the recorder configured position and your mobile devices location.  This can be useful to ensure the recorder's position closely matches your mobile device.
+      - Separation - shows distance between the recorder configured position and your mobile devices location.  This can be useful to ensure the recorder's position closely matches your mobile device.
     * **Buttons**
       - Update - sends the current configuration to the recorder, including the date/time and location.
       - Use Defaults - sets all selections to the default configuration, this will be grayed out if it matches the default.
@@ -104,23 +105,23 @@
     * All recordings will be stored in this directory.
     * All files follow this naming convention: <FILE_PREFIX>_<RECORDER_ID>_YYYY-MM-DD_THH-MM-SS.WAV
   - **Metadata**
-    * <FILE_PREFIX>_<RECORDER_ID>meta.txt file that tracks the location and a temperature log.
+    * <FILE_PREFIX>_<RECORDER_ID>meta.txt file that tracks a temperature log during recordings.
   - **Log**
-    * <FILE_PREFIX>_<RECORDER_ID>log.txt log file for troubleshooting.  Tracks all updates to the configuration as well as when recordings start/stop or certain error conditions.
+    * <RECORDER_ID>log.txt log file for troubleshooting.  Tracks all updates to the configuration as well as when recordings start/stop or certain error conditions.
+  - **Sites**
+    * <RECORDER_ID>_sites.txt csv file that tracks the lat/lon for each site/prefix
   - **config.txt**
     * Configuration settings for the recorder, it is not recommended to manually modifify this.  The app automatically updates this file when making changes.
-
 
 
 ## How to Update the Firmware
   - Physical connections
     - https://ftdichip.com/products/ttl-232r-3v3/
     - Connect the cable to the board with the black wire to GND and the green wire to DTR.
-  - Install Drivers
-    - https://ftdichip.com/drivers/vcp-drivers/
   - Install Artemis firmware tool
     - https://github.com/sparkfun/Artemis-Firmware-Upload-GUI/releases
-  - TODO
+  - Download the latest firmware 
+    - https://github.com/tgruetzm/Owl-Sense
 
 
 
