@@ -19,10 +19,10 @@
 
 
 ## Important Tips and Tricks
-  1. The thumb screws are retained with a small o-ring. Pulling on the screws especially while turning will cause the o-ring to come off and you will lose it!
-  2. Always check recorder at the time of deployment to ensure that it's recording or on standby and that the error led is off.  Sudden shocks, such as dropping can cause the battery to disconnect and the clock will reset.
+  1. The thumb screws are retained with a small o-ring. Pulling on the screws especially while turning can cause the o-ring to come off and get lost.
+  2. Always check recorder at the time of deployment to ensure that it's recording or on standby and that the error led is off.  Sudden shocks, such as dropping can cause the battery to disconnect and the clock may reset.
   3. LED flashing uses negligible amounts of power, there is no issue with the error LED draining the battery before a deployment if the clock is not set or a card not inserted.
-  4. Units come with a small desiccant pack.  It is required to remain in the unit.  If units are kept mostly dry and stored closed the desiccant should last for years.  Moisture on the board will cause it to misbehave and will likely shorten it's life.
+  4. Units come with a small desiccant pack.  It is recommended to remain in the unit.  Humidity can condense on the board after the case is closed.  Moisture on the board can cause it to misbehave and will likely shorten it's life.
 
 
 ## Hardware Overview
