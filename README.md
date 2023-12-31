@@ -84,13 +84,12 @@
       * Sample Rate - determines the maximum frequency of the audio, how much data is used as well as how long the recorder will run.  Continuous runtimes in hours can be calculated as battery capacity in mAh/current.  The rated capacities are always best case at room temperature with a new cell.  If you want accurate runtimes, you may need to derate the capacity to account for cell age and temperature.  This could be anywhere from 0-25%.  Data usage and runtimes below assume continuous recordings with a 3500mAh battery at room temerature.  This is best case, which will often not be seen.  Standy/Off power consumption is negligible(0.3mA).
           |Sample Rate| Current| Data Usage per Day| Runtime|
           |----|-----|------|------|
-          |8k| 3.25mA| 1.3GB| 1077h|
-          |12k| 4.25mA| 1.9GB| 823h|
-          |16k| 4.75mA| 2.6GB| 736h|
-          |24k| 6.15mA| 3.9GB| 569h|
-          |32k| 7mA| 5.1GB| 500h|
-          |48k| 15mA| 7.7GB| 230h|
-          * 48k sample rate uses dramatically more power due to the need to operate the system in a higher power state.
+          |8k| 3.3mA| 1.3GB| 1060h|
+          |12k| 4.3mA| 1.9GB| 814h|
+          |16k| 4.8mA| 2.6GB| 729h|
+          |24k| 6.0mA| 3.9GB| 583h|
+          |32k| 7.0mA| 5.1GB| 500h|
+          |48k| 8.8mA| 7.7GB| 397h|
       * Gain - supports configurable output gain between 0dB and 40.5dB.  Higher gain values are generally useful, but can always be amplified in post processing.  Unless you're dealing with very loud sound sources, using high gain is beneficial.  With a 0dB gain, the maximum amplitude the recording system can handle is 120dB.  At 40.5dB gain, the maximum amplitude is 79.5dB
       * High Pass Filter - 0(Min) to 7(Max).  This reduces the amplitude of low frequency audio.  This can be useful to filter out low frequency noise and minor wind events.  Generally I would use the minium value unless you know how this works with your specific target species.  Post processes can always add a High Pass Filter.
     * **Location**
