@@ -89,7 +89,8 @@
           |16k| 4.75mA| 2.6GB| 736h|
           |24k| 6.15mA| 3.9GB| 569h|
           |32k| 7mA| 5.1GB| 500h|
-          |48k| 11.5mA| 7.7GB| 300h|
+          |48k| 15mA| 7.7GB| 230h|
+          * 48k sample rate uses dramatically more power due to the need to operate the system in a higher power state.
       * Gain - supports configurable output gain between 0dB and 40.5dB.  Higher gain values are generally useful, but can always be amplified in post processing.  Unless you're dealing with very loud sound sources, using high gain is beneficial.  With a 0dB gain, the maximum amplitude the recording system can handle is 120dB.  At 40.5dB gain, the maximum amplitude is 79.5dB
       * High Pass Filter - 0(Min) to 7(Max).  This reduces the amplitude of low frequency audio.  This can be useful to filter out low frequency noise and minor wind events.  Generally I would use the minium value unless you know how this works with your specific target species.  Post processes can always add a High Pass Filter.
     * **Location**
