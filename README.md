@@ -23,6 +23,7 @@
   2. Always check recorder at the time of deployment to ensure that it's recording or on standby and that the error led is off.  Sudden shocks, such as dropping can cause the battery to disconnect and the clock may reset.
   3. LED flashing uses negligible amounts of power, there is no issue with the error LED draining the battery before a deployment if the clock is not set or a card not inserted.
   4. Units come with a small desiccant pack.  It is recommended to remain in the unit.  Humidity can condense on the board after the case is closed.  Moisture on the board can cause it to misbehave and will likely shorten it's life.
+  5. 550 paracord is a easy and cost effective method for attaching units to trees.
 
 
 ## Hardware Overview
@@ -112,6 +113,10 @@
     * <RECORDER_ID>_sites.txt csv file that tracks the lat/lon for each site/prefix
   - **config.txt**
     * Configuration settings for the recorder, it is not recommended to manually modifify this.  The app automatically updates this file when making changes.
+    * Simulating a specific location and date/time can be done by manually updating/adding the following to the configuration.  
+      LAT=46.75790;LON=-114.07405;TIME=2024-11-03_T13:00:00;  
+      Keep in mind that if you load the app and press update, the location and time will be reset to actual values.
+
 
 
 ## How to Update the Firmware
