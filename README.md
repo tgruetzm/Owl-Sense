@@ -2,13 +2,14 @@
 <img src="logo.png" alt="Owl Sense" width="150" />
 
 ## Overview
-  * Owl Sense offers an affordable and user-friendly audio recording solution for general purpose wildlife research.
+  * Owl Sense offers an affordable and user-friendly audio recording solution for wildlife research.
   * Specifically built with extended runtimes and exceptional audio quality.
   * Recording times can exceed 500 hours at moderate sample rates(24k) or lower on a single 18650 cell.
   * Supports custom scheduling options to record only when necessary.
   * Fully weather resistant enclosure and microphone.
 
 ## Quick Start Guide
+  1. Download the iOS Owl Sense app.
   1. Install a protected 18650 battery and memory card.
   2. The yellow Error LED will flash indicating the clock is not set.
   3. Hold the Wireless button until the blue LED illuminates, to turn on the radio.
@@ -41,10 +42,11 @@
     * Only use protected 18650 cells from reputable manufacturers.  Cell length must be ~70mm.
     * Nevery use a battery if it shows any signs of damage or leakage.
     * End user is responsible for any damage or injury caused by misuse or mishandling lithium ion batteries and chargers.
-    * Lithium batteries should always be stored individually and in a case or box that separates cells.
     * Lithium batteries may explode, burn, or cause a fire if misused or mishandled.
+    * Lithium batteries should always be stored individually and in a case or box that separates cells.
+
   - **Memory Card**
-    * At this time only Samsung EVO Plus 64GB or 128GB cards are supported.  Others will work, but there is no guarantee of compatability.  Other cards may significantly reduce runtimes.
+    * At this time only Samsung EVO Plus 64GB or 128GB cards are supported.  Others will work, but there is no guarantee of compatability.  Other cards may significantly reduce runtimes or cause other undesirable issues.
   - **Microphone**
     * Featuring Infineon's [IM73D122](https://www.infineon.com/cms/en/product/sensor/mems-microphones/mems-microphones-for-consumer/im73d122/) microphone
     * Ultra-low self-noise/ultra-high SNR 73dB(A)
@@ -55,7 +57,7 @@
 ## iOS App Overview
   - **Main Page**
     * Recorder List - shows an item for each recorder in range that has the wireless radio on.
-    * Defaults - allows configuration of default values, these can be easily loaded to any recorder or are automatically loaded if no configuration file is found.
+    * Settings - allows configuration of default values, these can be easily loaded to any recorder or are automatically loaded if no configuration file is found.
   - **Recorder Detail Page**
     * **Recorder Detail** - shows basic info about the recorder.
       - ID - this value is unique to each recorder(ID can be copied by long pressing).
@@ -63,12 +65,12 @@
       - Battery levels - shows voltage and approximate battery capacity remaining.  Capacity numbers are estimates using a Molicel M35A cell. Other cells may show significantly higher or lower capacity estimates.  
       - Current date/time - date/time set on the recorder.
       - dB level - shows approximate dB level of the microphone.  This is useful to gauge whether there is an issue with the microphone system(blockage or failure).  You should see this respond to changes in sound intensity.
-      - Card details - shows basic storage information.
+      - Card details - shows basic storage information.  Format - erases and formats the card.
       - Firmware version
     * **Recorder Configuration**
       - On/off - identical function to the physical On/Off button.
       - File Prefix - all audio files will be prefixed with this name.  Supports 18 characters, alphanumeric and dash(File Prefix can be copied by long pressing).
-      - Auto DST - Automatically adjusts the recorders clock when DST starts and ends.  Follows US DST standards.
+      - Auto DST - Automatically adjusts the recorders clock when DST starts and ends.  Follows the general US DST rule(ignores any half-hour changes) - always goes back exactly 1 hour in the fall and forward 1 hour in the spring(turn this off if you do not want the system to perform this change).
       - Schedule
         1. Continuous
         2. Sunrise to Sunset
@@ -91,7 +93,7 @@
           |24k| 6.0mA| 3.9GB| 583h|
           |32k| 7.0mA| 5.1GB| 500h|
           |48k| 8.8mA| 7.7GB| 397h|
-      * Gain - supports configurable output gain between 0dB and 40.5dB.  Higher gain values are generally useful, but can always be amplified in post processing.  Unless you're dealing with very loud sound sources, using high gain is beneficial.  With a 0dB gain, the maximum amplitude the recording system can handle is 120dB.  At 40.5dB gain, the maximum amplitude is 79.5dB
+      * Gain - supports configurable output gain between 0dB and 40.5dB.  Higher gain values are generally useful, but can always be amplified in post processing.  Unless you're dealing with very loud sound sources, using high gain is beneficial.  With a 0dB gain, the maximum amplitude the recording system can handle is 122dB.  At 40.5dB gain, the maximum amplitude is 81.5dB
       * High Pass Filter - 0(Min) to 7(Max).  This reduces the amplitude of low frequency audio.  This can be useful to filter out low frequency noise and minor wind events.  Generally I would use the minium value unless you know how this works with your specific target species.  Post processes can always add a High Pass Filter.
     * **Location**
       - Recorder - shows the configured Lat/Long set on the recorder(location can be copied by long pressing)
