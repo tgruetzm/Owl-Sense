@@ -16,8 +16,8 @@
   4. Load the Owl Sense app on your phone.
   5. Connect to and configure the device, set a Continuous schedule and toggle the recorder On.
   6. Press Update and disconnect from the recorder.
-  7. The red Record LED should flash indicating a recording is in progress.
-
+  7. The red Record LED should flash indicating a recording is in progress.  
+   An overview video can be found at https://owlsense.co/support
 
 ## Important Tips and Tricks
   1. The thumb screws are retained with a small o-ring. Pulling on the screws especially while turning can cause the o-ring to come off and get lost.
@@ -122,13 +122,19 @@
 
 
 ## How to Update the Firmware
+  - Install Artemis firmware tool
+    - https://github.com/tgruetzm/Owl-Sense/raw/main/ArtemisUploader.exe
+  - Download the latest firmware 
+    - https://github.com/tgruetzm/Owl-Sense/tree/main/firmware/v1.1
   - Physical connections
     - https://ftdichip.com/products/ttl-232r-3v3/
     - Connect the cable to the board with the black wire to GND and the green wire to DTR.
-  - Install Artemis firmware tool
-    - https://github.com/sparkfun/Artemis-Firmware-Upload-GUI/releases
-  - Download the latest firmware 
-    - https://github.com/tgruetzm/Owl-Sense
+  - Using the Artemis Uploader
+    - Select the latest firmware bin file
+    - Select the correct Com Port(Should be USB Serial)
+    - Press Upload Firmware(The update should take about 10 seconds)
+    * A future firmware version hopefully will allow for updates from a firmware file on the memory card or possibly wirelessly.
+
 
 
 
