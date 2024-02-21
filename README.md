@@ -159,8 +159,8 @@ NOTE: This equipment has been tested and found to comply with the limits for a C
   **Manufacturer:**  
   Owl Sense LLC  
   Lolo, MT 59847  
-  troy@owlsense.co  
-  www.owlsense.co  
+  troy@owlsenserecorders.com  
+  www.owlsenserecorders.com  
 
   **Modular Components Used:**  
   NAME: Artemis V1  
