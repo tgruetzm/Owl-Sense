@@ -19,12 +19,14 @@
   7. The red Record LED should flash indicating a recording is in progress.  
    An overview video can be found at https://owlsense.co/support
 
-## Important Tips and Tricks
+## Important Tips and Tricks!
   1. The thumb screws are retained with a small o-ring. Pulling on the screws especially while turning can cause the o-ring to come off and get lost.
   2. Always check recorder at the time of deployment to ensure that it's recording or on standby and that the error led is off.  Sudden shocks, such as dropping can cause the battery to disconnect and the clock may reset.
-  3. LED flashing uses negligible amounts of power, there is no issue with the error LED draining the battery before a deployment if the clock is not set or a card not inserted.
-  4. Units come with a small desiccant pack.  It is recommended to remain in the unit.  Humidity can condense on the board after the case is closed.  Moisture on the board can cause it to misbehave and will likely shorten it's life.
-  5. 550 paracord is a easy and cost effective method for attaching units to trees.
+  3. For consistently deploying multiple units, use the Default Configuration settings in the app.
+  4. LED flashing uses negligible amounts of power, there is no issue with the error LED draining the battery before a deployment if the clock is not set or a card not inserted.
+  5. Units come with a small desiccant pack.  It is recommended to remain in the unit.  Humidity can condense on the board after the case is closed.  Moisture on the board can cause it to misbehave and will likely shorten it's life.
+  6. 550 paracord is a easy and cost effective method for attaching units to trees.
+  7. Protected 18650 cells must only be used in the device.  These cells have a circuit to disable the cell in case of a fault.  See https://owlsense.co/support for recommendations.
 
 
 ## Hardware Overview
